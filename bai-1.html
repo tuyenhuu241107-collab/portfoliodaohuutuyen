@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bài 1  Thao tác cơ bản với tệp tin và thư mục | Đào Hữu Tuyến</title>
+<meta name="description" content="Bài tập 1 mục 1.4  Thao tác cơ bản với tệp tin và thư mục. Portfolio Đào Hữu Tuyến, UEB-VNU.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">ĐT</span>
+      <span class="brand-name">Đào Hữu Tuyến</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Giới thiệu</a>
+      <a href="du-an.html" class="active">Dự án</a>
+      <a href="tong-ket.html">Tổng kết</a>
+    </div>
+  </div>
+</nav>
+
+<header class="article-head">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Trang chủ</a> / <a href="du-an.html">Dự án</a> / Bài 1</div>
+    <h1 class="article-title">01  Thao tác cơ bản<br>với tệp tin và thư mục</h1>
+    <p class="hero-lede" style="margin-bottom:0;">
+      Bài tập 1 của mục 1.4  Chương 1: Máy tính và các thiết bị ngoại vi. Bài mở màn của học phần,
+      và cũng là bài dạy mình một thói quen mà đến giờ vẫn đang dùng hằng ngày.
+    </p>
+    <div class="article-meta">
+      <span class="meta-pill">Chương 1</span>
+      <span class="meta-pill ghost">File Explorer · Windows</span>
+      <span class="meta-pill ghost">12 thao tác thực hành</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- MỤC TIÊU -->
+  <section>
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <div class="sec-num">MỤC TIÊU BÀI TẬP</div>
+          <h2>Nắm chắc cách máy tính lưu trữ dữ liệu</h2>
+        </div>
+        <div>
+          <p>
+            Mục tiêu của bài là thành thạo toàn bộ vòng đời của một tệp tin trên hệ điều hành Windows:
+            tạo ra, đặt tên, nhân bản, di chuyển, xóa và khôi phục. Nghe rất cơ bản, nhưng đây là
+            nền móng cho mọi việc phía sau.
+          </p>
+          <p>
+            Song song đó, bài yêu cầu thiết kế một <b>cấu trúc thư mục tối ưu</b> và một
+            <b>quy tắc đặt tên tệp</b> nhất quán  thứ quyết định ba tháng sau mình còn tìm lại được
+            file của chính mình hay không.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÁ TRÌNH -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">TÓM TẮT QUÁ TRÌNH THỰC HIỆN</div>
+        <h2>12 thao tác, làm tuần tự và chụp màn hình từng bước</h2>
+        <p class="sec-sub">Toàn bộ quá trình được thực hiện trên File Explorer của Windows, mỗi bước
+          đều có ảnh chụp minh họa trong file bài làm gốc bên dưới.</p>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h3>Nhóm thao tác tạo lập</h3>
+          <ul class="steps">
+            <li><span>Mở File Explorer bằng tổ hợp <b>Windows + E</b>.</span></li>
+            <li><span>Truy cập <b>This PC</b>, chọn một ổ đĩa không phải ổ hệ thống để tránh làm rối ổ C.</span></li>
+            <li><span>Tạo thư mục gốc <b>ThucHanh_DaoHuuTuyen</b> theo quy tắc đặt tên đã thống nhất.</span></li>
+            <li><span>Tạo tệp văn bản <b>GhiChu.txt</b> bên trong thư mục vừa lập.</span></li>
+            <li><span>Đổi tên tệp thành <b>GhiChuQuanTrong.txt</b> bằng lệnh Rename.</span></li>
+            <li><span>Tạo thư mục con <b>TaiLieu</b> để phân tầng dữ liệu.</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Nhóm thao tác di chuyển &amp; xóa</h3>
+          <ul class="steps" style="counter-reset: s 6;">
+            <li><span>Sao chép <b>GhiChuQuanTrong.txt</b> vào thư mục <b>TaiLieu</b> bằng Ctrl+C / Ctrl+V  tệp gốc vẫn còn.</span></li>
+            <li><span>Di chuyển <b>DiChuyen.txt</b> bằng Ctrl+X / Ctrl+V  tệp gốc biến mất khỏi vị trí cũ.</span></li>
+            <li><span>Xóa mềm bằng phím <b>Delete</b>: tệp rơi vào Recycle Bin, vẫn cứu được.</span></li>
+            <li><span>Xóa vĩnh viễn bằng <b>Shift + Delete</b>: hệ thống cảnh báo, và không có đường lui.</span></li>
+            <li><span>Khôi phục tệp từ <b>Recycle Bin</b> bằng lệnh Restore, tệp quay về đúng vị trí ban đầu.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:38px;">
+        <h4>Điểm khác biệt quan trọng nhất mình rút ra</h4>
+        <p style="margin-top:6px;">
+          <b>Copy &amp; Paste</b> nhân bản dữ liệu, <b>Cut &amp; Paste</b> di dời nó. <b>Delete</b> chỉ
+          là chuyển vào thùng rác, còn <b>Shift + Delete</b> mới là xóa thật. Bốn thao tác nhìn giống
+          nhau nhưng hậu quả hoàn toàn khác 
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUY TẮC -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">KẾT QUẢ</div>
+        <h2>Cấu trúc thư mục và quy tắc đặt tên mình đang dùng</h2>
+        <p class="sec-sub">Từ bài tập này, mình chuẩn hóa luôn cách tổ chức tài liệu học tập của mình.</p>
+      </div>
+      <div class="two-col">
+        <div>
+          <div class="card" style="padding:0; overflow:hidden;">
+            <div class="pdf-bar"><span class="f"><i>CÂY THƯ MỤC</i> ThucHanh_DaoHuuTuyen</span></div>
+            <pre style="font-family:var(--font-mono); font-size:13px; line-height:2; padding:24px 26px; margin:0; color:var(--ink-soft); overflow-x:auto;">ThucHanh_DaoHuuTuyen/
+├── GhiChuQuanTrong.txt
+├── DiChuyen.txt
+└── TaiLieu/
+    └── GhiChuQuanTrong.txt   (bản sao)</pre>
+          </div>
+        </div>
+        <div>
+          <h3>Bốn quy tắc đặt tên mình tự đặt ra</h3>
+          <ul class="bullets">
+            <li><span><b>Không dấu, không khoảng trắng.</b> Dùng gạch dưới để nối từ, tránh lỗi khi
+              tải lên các nền tảng trực tuyến hoặc khi nén file gửi đi.</span></li>
+            <li><span><b>Tên phải nói được nội dung.</b> <span style="font-family:var(--font-mono); font-size:13px;">GhiChuQuanTrong</span>
+              nói rõ hơn hẳn <span style="font-family:var(--font-mono); font-size:13px;">New Text Document</span>.</span></li>
+            <li><span><b>Gắn định danh cá nhân vào thư mục gốc.</b> Khi nộp bài chung một folder lớp,
+              tên có mã sinh viên giúp giảng viên không phải đoán bài của ai.</span></li>
+            <li><span><b>Mỗi thư mục con một chức năng.</b> <span style="font-family:var(--font-mono); font-size:13px;">TaiLieu</span>
+              chỉ chứa tài liệu tham khảo, không trộn lẫn bài làm và bản nháp.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout clay" style="margin-top:38px;">
+        <h4>Bài tập đã giúp mình hiểu rõ cách quản lý file hiệu quả, giúp người dùng tiết kiệm thời gian để tìm file và có thể giúp mình quản lý tài liệu học tập từng môn hiệu quả hơn.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SẢN PHẨM -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">SẢN PHẨM ĐÍNH KÈM</div>
+        <h2>File bài làm gốc</h2>
+        <p class="sec-sub">Bản PDF đầy đủ 10 trang, kèm ảnh chụp màn hình minh họa cho từng thao tác.</p>
+      </div>
+      <div class="pdf-shell">
+        <div class="pdf-bar">
+          <span class="f"><i>PDF</i> Bai1_ThaoTacTepTin_DaoHuuTuyen.pdf · 10 trang</span>
+          <a href="assets/pdf/bai1.pdf" target="_blank" rel="noopener">Mở tab mới ↗</a>
+        </div>
+        <iframe src="assets/pdf/bai1.pdf#view=FitH" title="Bài 1  Thao tác cơ bản với tệp tin và thư mục"></iframe>
+      </div>
+      <p style="margin-top:16px; color:var(--muted); font-size:14px;">
+        Nếu trình duyệt không hiển thị được bản xem trước,
+        <a class="ext" href="assets/pdf/bai1.pdf" target="_blank" rel="noopener">bấm vào đây để tải file PDF</a>.
+      </p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="pager">
+      <a href="du-an.html">
+        <span class="lbl">← Quay lại</span>
+        <span class="ttl">Danh mục dự án</span>
+      </a>
+      <a href="bai-2.html" style="text-align:right;">
+        <span class="lbl">Bài tiếp theo →</span>
+        <span class="ttl">02  Tìm kiếm và đánh giá thông tin</span>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="f-name">Đào Hữu Tuyến</div>
+        <p>Sinh viên Kinh tế Phát triển  Trường Đại học Kinh tế, Đại học Quốc gia Hà Nội.<br>
+          Portfolio Kỹ thuật số của học phần Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo.</p>
+      </div>
+      <div>
+        <h5>Nội dung</h5>
+        <a href="index.html">Giới thiệu</a>
+        <a href="du-an.html">Dự án</a>
+        <a href="tong-ket.html">Tổng kết</a>
+      </div>
+      <div>
+        <h5>Sáu bài tập</h5>
+        <a href="bai-1.html">01  Tệp tin &amp; thư mục</a>
+        <a href="bai-2.html">02  Đánh giá thông tin</a>
+        <a href="bai-3.html">03  Viết prompt</a>
+        <a href="bai-4.html">04  Hợp tác trực tuyến</a>
+        <a href="bai-5.html">05  Sáng tạo nội dung số</a>
+        <a href="bai-6.html">06  AI có trách nhiệm</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>MSV 25050765 · UEB  VNU</span>
+      <span>Portfolio cá nhân · 2026</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bài 4  Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm | Đào Hữu Tuyến</title>
+<meta name="description" content="Bài tập 3 mục 4.4  Dự án làm áo lớp đi quân sự, điều phối bằng Trello, Google Meet, Google Sheets và Google Drive.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .kanban { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .kb-col { background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 16px; }
+  .kb-head { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 1.4px; text-transform: uppercase; font-weight: 600; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .kb-head::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+  .kb-card { background: var(--bone); border: 1px solid var(--line); border-radius: 3px; padding: 11px 13px; font-size: 14px; margin-bottom: 9px; }
+  .kb-card:last-child { margin-bottom: 0; }
+  @media (max-width: 940px) { .kanban { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">ĐT</span>
+      <span class="brand-name">Đào Hữu Tuyến</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Giới thiệu</a>
+      <a href="du-an.html" class="active">Dự án</a>
+      <a href="tong-ket.html">Tổng kết</a>
+    </div>
+  </div>
+</nav>
+
+<header class="article-head">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Trang chủ</a> / <a href="du-an.html">Dự án</a> / Bài 4</div>
+    <h1 class="article-title">04  Sử dụng công cụ hợp tác<br>trực tuyến cho dự án nhóm</h1>
+    <p class="hero-lede" style="margin-bottom:0;">
+      Bài tập 3 của mục 4.4  Chương 4: Giao tiếp và hợp tác trong môi trường số. Mình không dựng một
+      tình huống giả định: dự án là <b>làm áo lớp để cả lớp cùng mặc đi quân sự và chụp ảnh</b>, và
+      mình là người đứng ra điều phối.
+    </p>
+    <div class="article-meta">
+      <span class="meta-pill">Chương 4</span>
+      <span class="meta-pill ghost">Trello</span>
+      <span class="meta-pill ghost">Google Meet</span>
+      <span class="meta-pill ghost">Google Sheets</span>
+      <span class="meta-pill ghost">Google Drive</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- MỤC TIÊU -->
+  <section>
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <div class="sec-num">MỤC TIÊU BÀI TẬP</div>
+          <h2>Điều phối một tập thể bằng công cụ số, không phải bằng tin nhắn rời rạc</h2>
+        </div>
+        <div>
+          <p>
+            Bài tập yêu cầu đưa ra minh chứng về việc sử dụng công cụ quản lý dự án nhóm và cách thức
+            phối hợp trực tuyến. Mục tiêu của mình cụ thể hơn: đưa một việc mà lớp nào cũng làm 
+            đặt áo đồng phục  ra khỏi cảnh trôi tin nhắn trong nhóm chat.
+          </p>
+          <p>
+            Vấn đề của cách làm cũ ai cũng biết: người báo size trong chat, người nhắn riêng, tiền thu
+            không rõ ai đã đóng, và không ai biết việc đang nằm ở khâu nào. Mình muốn thử xem công cụ
+            số giải quyết được bao nhiêu phần trong số đó.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÁ TRÌNH -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">TÓM TẮT QUÁ TRÌNH THỰC HIỆN</div>
+        <h2>Bốn công cụ, mỗi công cụ giải một bài toán</h2>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:1.4px; color:var(--clay); margin-bottom:12px;">BƯỚC 1 · TRELLO</div>
+          <h4>Lên kế hoạch và chia nhiệm vụ</h4>
+          <p style="color:var(--muted); font-size:15px;">
+            Mình dùng Trello để lập kế hoạch cho toàn bộ quá trình, chia công việc thành ba cột
+            <b>Chưa làm</b>  <b>Đang làm</b>  <b>Đã hoàn thành</b>. Mình cũng là người đề xuất các
+            nhiệm vụ cụ thể: thu tiền, tìm nơi đặt áo, thu thập thông tin size của các thành viên.
+          </p>
+        </div>
+        <div class="card">
+          <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:1.4px; color:var(--clay); margin-bottom:12px;">BƯỚC 2 · GOOGLE MEET</div>
+          <h4>Họp để chốt phương án</h4>
+          <p style="color:var(--muted); font-size:15px;">
+            Mình tổ chức một cuộc họp qua Google Meet để các thành viên cùng lên ý tưởng, bàn về màu
+            sắc áo, tìm chỗ mua hợp lý và chốt phương án cuối. Những quyết định cần nhiều người đồng ý
+            thì họp nhanh vẫn hiệu quả hơn tranh luận qua chat.
+          </p>
+        </div>
+        <div class="card">
+          <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:1.4px; color:var(--clay); margin-bottom:12px;">BƯỚC 3 · GOOGLE SHEETS</div>
+          <h4>Thu thập dữ liệu size áo</h4>
+          <p style="color:var(--muted); font-size:15px;">
+            Mình tạo một bảng Google Sheets để các thành viên tự nhập thông tin cá nhân và size áo.
+            Mình theo dõi và chỉnh sửa dữ liệu để đảm bảo tính chính xác. Lịch sử chỉnh sửa của Sheets
+            cho biết ai đã điền, điền lúc nào  đây chính là minh chứng cho phần phối hợp trực tuyến.
+          </p>
+        </div>
+        <div class="card">
+          <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:1.4px; color:var(--clay); margin-bottom:12px;">BƯỚC 4 · GOOGLE DRIVE</div>
+          <h4>Lưu trữ tập trung</h4>
+          <p style="color:var(--muted); font-size:15px;">
+            Cuối cùng mình tạo một folder trên Google Drive để lưu toàn bộ thông tin của dự án  từ
+            bảng size, ảnh mẫu áo đến các tài liệu liên quan. Một địa chỉ duy nhất, ai cần cũng tự
+            tìm được mà không phải hỏi lại.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BẢNG TRELLO -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">MINH CHỨNG · BẢNG CÔNG VIỆC</div>
+        <h2>Bảng Trello mình đã dựng</h2>
+        <p class="sec-sub">Đây là cách các nhiệm vụ được tổ chức. Ảnh chụp bảng thật nằm trong file
+          bài làm gốc bên dưới.</p>
+      </div>
+      <div class="kanban">
+        <div class="kb-col">
+          <div class="kb-head" style="color:var(--clay);">Chưa làm</div>
+          <div class="kb-card">Thu tiền của các thành viên</div>
+          <div class="kb-card">Chốt số lượng áo cuối cùng</div>
+          <div class="kb-card">Nhận áo và phát cho lớp</div>
+        </div>
+        <div class="kb-col">
+          <div class="kb-head" style="color:var(--muted);">Đang làm</div>
+          <div class="kb-card">Thu thập thông tin size áo</div>
+          <div class="kb-card">Tìm nơi đặt áo phù hợp</div>
+          <div class="kb-card">Theo dõi và kiểm tra dữ liệu Sheets</div>
+        </div>
+        <div class="kb-col">
+          <div class="kb-head" style="color:var(--accent);">Đã hoàn thành</div>
+          <div class="kb-card">Lập kế hoạch tổng thể trên Trello</div>
+          <div class="kb-card">Họp Google Meet chốt ý tưởng &amp; màu áo</div>
+          <div class="kb-card">Tạo bảng Google Sheets thu thông tin</div>
+          <div class="kb-card">Tạo folder lưu trữ trên Google Drive</div>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:38px;">
+        <h4>Vì sao chia ba cột lại hiệu quả</h4>
+        <p style="margin-top:6px;">
+          Cả lớp nhìn vào bảng là biết ngay việc đang tắc ở đâu mà không cần ai phải hỏi. Quan trọng
+          hơn, mỗi nhiệm vụ có một người chịu trách nhiệm rõ ràng  thứ mà nhóm chat không bao giờ làm
+          được, vì trong chat việc gì cũng là việc chung và rốt cuộc là việc của người sốt ruột nhất.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KẾT QUẢ -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">KẾT QUẢ VÀ ĐIỀU RÚT RA</div>
+        <h2></h2>
+      </div>
+      <div class="two-col">
+        <div>
+          <h3>Về công cụ</h3>
+          <ul class="bullets">
+            <li><span><b>Mỗi công cụ giải đúng một bài toán.</b> Trello cho <i>ai làm gì</i>,
+              Meet cho <i>quyết định chung</i>, Sheets cho <i>dữ liệu chính xác</i>, Drive cho
+              <i>lưu trữ lâu dài</i>. Dùng lẫn lộn thì công cụ nào cũng dở.</span></li>
+            <li><span><b>Dữ liệu phải để người ta tự điền.</b> Nếu mình đi hỏi từng bạn rồi tự gõ lại,
+              vừa mất thời gian vừa dễ sai. Để mỗi người tự nhập size của mình là cách giảm sai sót
+              rẻ nhất.</span></li>
+            <li><span><b>Lịch sử chỉnh sửa là bằng chứng.</b> Sheets ghi lại ai sửa gì lúc nào 
+              minh bạch mà không cần ai phải giám sát ai.</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Về vai trò của mình</h3>
+          <ul class="bullets">
+            <li><span><b>Người điều phối không phải người làm hết.</b> Việc của mình là dựng khung để
+              mọi người tự chạy, thay vì một mình điền mọi thứ.</span></li>
+            <li><span><b>Chốt sớm quan trọng hơn chốt đẹp.</b> Cuộc họp Meet giúp lớp quyết được màu
+              áo trong một buổi, thay vì tranh luận cả tuần trong chat.</span></li>
+            <li><span><b>Kỹ năng này dùng được ngay ở nghề mình muốn làm.</b> Một nhà phân tích tài
+              chính cũng phải thu dữ liệu từ nhiều bộ phận, theo dõi tiến độ và giữ một nguồn dữ liệu
+              duy nhất. </span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SẢN PHẨM -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">SẢN PHẨM ĐÍNH KÈM</div>
+        <h2>File bài làm gốc</h2>
+        <p class="sec-sub">Bản PDF kèm ảnh chụp bảng Trello, bảng Google Sheets thông tin size áo và
+          lịch sử chỉnh sửa của các thành viên.</p>
+      </div>
+      <div class="pdf-shell">
+        <div class="pdf-bar">
+          <span class="f"><i>PDF</i> Bai4_HopTacTrucTuyen_DaoHuuTuyen.pdf · 3 trang</span>
+          <a href="assets/pdf/bai4.pdf" target="_blank" rel="noopener">Mở tab mới ↗</a>
+        </div>
+        <iframe src="assets/pdf/bai4.pdf#view=FitH" title="Bài 4  Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm"></iframe>
+      </div>
+      <p style="margin-top:16px; color:var(--muted); font-size:14px;">
+        Nếu trình duyệt không hiển thị được bản xem trước,
+        <a class="ext" href="assets/pdf/bai4.pdf" target="_blank" rel="noopener">bấm vào đây để tải file PDF</a>.
+      </p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="pager">
+      <a href="bai-3.html">
+        <span class="lbl">← Bài trước</span>
+        <span class="ttl">03  Viết Prompt hiệu quả</span>
+      </a>
+      <a href="bai-5.html" style="text-align:right;">
+        <span class="lbl">Bài tiếp theo →</span>
+        <span class="ttl">05  Sáng tạo nội dung số</span>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="f-name">Đào Hữu Tuyến</div>
+        <p>Sinh viên Kinh tế Phát triển  Trường Đại học Kinh tế, Đại học Quốc gia Hà Nội.<br>
+          Portfolio Kỹ thuật số của học phần Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo.</p>
+      </div>
+      <div>
+        <h5>Nội dung</h5>
+        <a href="index.html">Giới thiệu</a>
+        <a href="du-an.html">Dự án</a>
+        <a href="tong-ket.html">Tổng kết</a>
+      </div>
+      <div>
+        <h5>Sáu bài tập</h5>
+        <a href="bai-1.html">01  Tệp tin &amp; thư mục</a>
+        <a href="bai-2.html">02  Đánh giá thông tin</a>
+        <a href="bai-3.html">03  Viết prompt</a>
+        <a href="bai-4.html">04  Hợp tác trực tuyến</a>
+        <a href="bai-5.html">05  Sáng tạo nội dung số</a>
+        <a href="bai-6.html">06  AI có trách nhiệm</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>MSV 25050765 · UEB  VNU</span>
+      <span>Portfolio cá nhân · 2026</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
